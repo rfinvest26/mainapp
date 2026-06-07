@@ -2350,7 +2350,7 @@
         </div>
     </div>
 
-    <div class="ov" id="mMammothChat" onclick="closeMammothChatModal()">
+    <div class="ov" id="mMammothChat">
         <div class="sheet sheet--chat" onclick="event.stopPropagation()" id="shMammothChat">
             <div class="sheet-drag"></div>
             <div class="sheet-hdr">
@@ -3415,7 +3415,7 @@
                 setTimeout(() => l.style.display = 'none', 280);
             }
             setupRv(); setupTilt(document.getElementById('heroAnalytics')); setupTilt(document.getElementById('heroProfile'));
-            ['mInfo', 'mProfDet', 'mProfit', 'mMammothChat'].forEach(id => setupSwipe('sh' + id.slice(1), id));
+            ['mInfo', 'mProfDet', 'mProfit'].forEach(id => setupSwipe('sh' + id.slice(1), id));
             const alignPill = () => { const on = document.querySelector('.nav-btn.on'); const btns = [...document.querySelectorAll('.nav-btn')]; const i = btns.indexOf(on); if (i >= 0) syncNavPill(i); };
             requestAnimationFrame(() => { alignPill(); requestAnimationFrame(alignPill); });
             const navIsland = document.getElementById('navIsland');
